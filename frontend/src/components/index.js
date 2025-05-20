@@ -1,4 +1,4 @@
-import ListingCard from "./listingCard";
+import ListingCard from "./ListingCard";
 import Listing from "./Listing";
 import Button from "./Button";
 import Header from "./Header";
