@@ -20,6 +20,8 @@ const signupUser = async (req, res) => {
       const token = jwt.sign({ email }, process.env.AUTH_SUPER_SECRET); //generating token
       res.cookie("token", token, {
         httpOnly: true,
+        sameSite: "None",
+        secure: true,
         expires: Date.now() + 7 * 24 * 60 * 60 * 1000, //cookie expires after 7 days
         maxAge: 7 * 24 * 60 * 60 * 1000, //maximum age of cookie i.e. 7 days
       });
@@ -38,6 +40,8 @@ const loginUser = async (req, res) => {
       const token = jwt.sign({ email }, process.env.AUTH_SUPER_SECRET); //generating token to send to client browser
       res.cookie("token", token, {
         httpOnly: true,
+        sameSite: "None",
+        secure: true,
         expires: Date.now() + 7 * 24 * 60 * 60 * 1000, //cookie expires after 7 days
         maxAge: 7 * 24 * 60 * 60 * 1000
       });
@@ -51,7 +55,9 @@ const loginUser = async (req, res) => {
 //logout user
 const logoutUser = (req, res, next) => {
   res.cookie("token", "", {
-    httpOnly: true
+    httpOnly: true,
+    sameSite: "None",
+    secure: true,
   });
   res.json({ message: "logged out successfully" });
 };
