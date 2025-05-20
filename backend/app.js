@@ -34,12 +34,6 @@ async function main() {
   await mongoose.connect(process.env.MONGODB_URL);
 }
 
-//home route
-app.get("/", (req, res) => {
-  res.send("You are on home page.");
-  // console.log(req.session);
-});
-
 //routes
 app.use("/listings", listingRouter);
 app.use("/listings/:id/reviews", reviewRouter);
