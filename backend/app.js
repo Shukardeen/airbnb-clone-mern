@@ -1,5 +1,6 @@
 import dotenv from "dotenv";
 import path from "path";
+import { fileURLToPath } from 'url';
 import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
@@ -10,6 +11,8 @@ import cookieParser from "cookie-parser";
 dotenv.config({path: path.resolve(process.cwd(), ".env")}); //loading env variables
 
 const port = 3000;
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 const app = express();
 
 app.use(cors({
