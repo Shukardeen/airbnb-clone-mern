@@ -1,6 +1,5 @@
 import dotenv from "dotenv";
 import path from "path";
-import { fileURLToPath } from 'url';
 import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
@@ -11,8 +10,6 @@ import cookieParser from "cookie-parser";
 dotenv.config({path: path.resolve(process.cwd(), ".env")}); //loading env variables
 
 const port = 3000;
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 const app = express();
 
 app.use(cors({
@@ -21,7 +18,6 @@ app.use(cors({
 }));
 
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, 'frontend', 'dist')));
 app.use(express.json());
 app.use(cookieParser());
 
@@ -34,14 +30,20 @@ async function main() {
   await mongoose.connect(process.env.MONGODB_URL);
 }
 
+//home route
+app.get("/", (req, res) => {
+  res.send("You are on home page.");
+  // console.log(req.session);
+});
+
 //routes
 app.use("/listings", listingRouter);
 app.use("/listings/:id/reviews", reviewRouter);
 app.use("/auth", userRouter);
 
 //page not found error
-app.get("*", (req, res, next) => {
-  res.sendFile(path.join(__dirname, "frontend", "dist", "index.html"));
+app.all("*", (req, res, next) => {
+  return next(new ExpressError(404, "Page not found!"));
 });
 
 //error handling middleware
