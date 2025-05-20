@@ -18,6 +18,7 @@ app.use(cors({
 }));
 
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, 'frontend', 'dist')));
 app.use(express.json());
 app.use(cookieParser());
 
@@ -42,8 +43,8 @@ app.use("/listings/:id/reviews", reviewRouter);
 app.use("/auth", userRouter);
 
 //page not found error
-app.all("*", (req, res, next) => {
-  return next(new ExpressError(404, "Page not found!"));
+app.get("*", (req, res, next) => {
+  res.sendFile(path.join(__dirname, "frontend", "dist", "index.html"));
 });
 
 //error handling middleware
