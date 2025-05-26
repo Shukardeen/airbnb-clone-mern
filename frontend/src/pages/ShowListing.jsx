@@ -45,7 +45,7 @@ function ShowListing() {
 
   if (!listing || Object.keys(listing).length === 0) {
     return (
-      <div className="w-full h-screen flex justify-center items-center">
+      <div className="w-full h-full flex justify-center items-center">
         <Box sx={{ display: 'flex' }}>
           <CircularProgress />
         </Box>
