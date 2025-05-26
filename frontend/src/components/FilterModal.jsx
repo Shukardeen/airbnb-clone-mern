@@ -25,7 +25,7 @@ function FilterModal({ isOpen, onClose, onApply, onClear }) {
 
     return (
         <div className='fixed inset-0 backdrop-blur-[5px] bg-black/70 flex items-center justify-center z-50'>
-            <div className='w-lg rounded-xl flex flex-col justify-center items-center bg-white relative px-8 py-6'>
+            <div className='md:w-2xl lg:w-lg rounded-xl flex flex-col justify-center items-center bg-white relative px-8 py-6'>
                 <div className='w-full flex justify-between items-center border-b-1 border-gray-300 pb-4'>
                     <h1 className='text-xl font-semibold font-jakarta'>Filters</h1>
                     <button 
