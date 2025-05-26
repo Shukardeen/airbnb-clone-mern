@@ -52,7 +52,7 @@ function ReviewInput({ listing }) {
   };
 
   return (
-    <div className="w-9/10 md:w-3/5 md:px-7 mx-auto flex min-h-full flex-col justify-center items-start font-jakarta my-4 px-4 py-4 box-border rounded-md shadow-[0_0_2px_rgba(0,0,0,0.5)]">
+    <div className="w-9/10 md:w-4/5 lg:w-3/5 md:px-7 mx-auto flex min-h-full flex-col justify-center items-start font-jakarta my-4 px-4 py-4 box-border rounded-md shadow-[0_0_2px_rgba(0,0,0,0.5)]">
       <p className="text-xl mb-2 font-bold">Leave a review</p>
       <p className="text-lg mb-2.5">Rating</p>
       <form onSubmit={handleSubmit(onSubmit)} className="w-full">
