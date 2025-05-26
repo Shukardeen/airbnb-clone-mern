@@ -40,7 +40,7 @@ function Review({ listing, reviews }) {
 
   if (reviews.length === 0) {
     return (
-      <div className={`${!isAuthenticated && "mt-4"} mx-auto px-4 shadow-[0_0_2px_rgba(0,0,0,0.5)] py-4 md:px-6 flex flex-col w-9/10 md:w-4/5 lg:3/5 h-full rounded-t-md items-start font-jakarta`}>
+      <div className={`${!isAuthenticated && "mt-4"} mx-auto px-4 shadow-[0_0_2px_rgba(0,0,0,0.5)] py-4 md:px-6 flex flex-col w-9/10 md:w-4/5 lg:w-3/5 h-full rounded-t-md items-start font-jakarta`}>
         <h2 className="text-xl font-semibold mb-2">Reviews</h2>
         <h2 className="text-lg text-gray-600">No reviews yet</h2>
       </div>
