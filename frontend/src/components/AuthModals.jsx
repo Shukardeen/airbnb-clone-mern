@@ -122,6 +122,7 @@ function AuthModals({ isOpen, onClose, initialMode = 'login' }) {
                             Login
                         </button>
                     </form>
+                    <p>Don&apos;t have an account? <button onClick={() => setMode('signup') classname="text-blue font-semibold mt-2"}>Signup</button></p>
                 ) : (
                     <form onSubmit={handleSubmit(handleSignup)} className="space-y-4">
                         <div>
@@ -158,6 +159,7 @@ function AuthModals({ isOpen, onClose, initialMode = 'login' }) {
                             Signup
                         </button>
                     </form>
+                    <p>Already have an account? <button onClick={() => setMode('login') classname="text-blue font-semibold mt-2"}>Login</button></p>
                 )}
             </div>
         </div>
