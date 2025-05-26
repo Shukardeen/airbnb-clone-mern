@@ -70,7 +70,7 @@ function AuthModals({ isOpen, onClose, initialMode = 'login' }) {
 
     return (
         <div className="fixed inset-0 backdrop-blur-[5px] bg-black/70 flex items-center justify-center z-50">
-            <div className="bg-white rounded-lg p-8 w-4/5 md:w-1/2 lg:w-1/4 relative shadow-lg z-60">
+            <div className="bg-white rounded-lg p-8 w-4/5 md:w-1/2 md:h-1/4 lg:h-full lg:w-1/4 relative shadow-lg z-60">
                 <button 
                     onClick={onClose}
                     className="absolute top-4 right-4 h-8 w-8 cursor-pointer hover:bg-gray-200 px-1 rounded-full"
