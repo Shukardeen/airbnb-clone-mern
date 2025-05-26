@@ -54,7 +54,7 @@ function ShowListing() {
   }
 
   return (
-    <div className="w-full h-full flex flex-col justify-start items-start">
+    <div className="w-full h-full flex flex-col justify-start items-start gap-2">
       <Listing listing={listing} key={listing?._id} />
       <Map listing={listing} />
       {isAuthenticated && <ReviewInput listing={listing} />}
