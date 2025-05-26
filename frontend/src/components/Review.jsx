@@ -48,7 +48,7 @@ function Review({ listing, reviews }) {
   }
 
   return (
-    <div className={`${!isAuthenticated && "mt-4"} mx-auto shadow-[0_0_2px_rgba(0,0,0,0.5)] py-4 md:px-6 px-4 flex flex-col w-9/10 md:w-3/5 h-full rounded-t-md items-start font-jakarta`}>
+    <div className={`${!isAuthenticated && "mt-4"} mx-auto shadow-[0_0_2px_rgba(0,0,0,0.5)] py-4 md:px-6 px-4 flex flex-col w-9/10 md:w-4/5 lg:w-3/5 h-full rounded-t-md items-start font-jakarta`}>
       <h2 className="text-xl font-semibold mb-3">Reviews</h2>
       <div className="w-full min-h-full flex flex-col md:grid md:grid-cols-2 box-border gap-3">
         {reviews.map((review, index) => {
