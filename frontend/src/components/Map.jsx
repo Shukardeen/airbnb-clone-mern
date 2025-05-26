@@ -45,7 +45,7 @@ function Map({ listing }) {
     }, [coordinates]);
 
     return (
-        <div className='w-9/10 md:w-3/5 mx-auto mt-4'>
+        <div className='w-9/10 md:w-4/5 lg:w-3/5 mx-auto mt-4'>
             <h2 className='font-jakarta mb-2 font-semibold text-2xl'>Where you'll be</h2>
             <div
                 ref={mapContainerRef}
