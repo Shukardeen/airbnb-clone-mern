@@ -124,7 +124,7 @@ function Home() {
 
       
         {data.length > 0 ? (
-          <div className="w-full listings grid grid-cols-1 flex-wrap md:grid-cols-4 place-items-center gap-1.5 mt-5">
+          <div className="w-full listings grid grid-cols-1 flex-wrap md:grid-cols-3 lg:grid-cols-4 place-items-center gap-1.5 mt-5">
           {data.map((listing) => (
             <ListingCard listing={listing} key={listing._id} />
           ))}
