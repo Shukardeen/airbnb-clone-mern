@@ -59,7 +59,7 @@ function Listing({ listing }) {
   };
 
   return (
-    <div className="listing shadow-[0_0_2px_rgba(0,0,0,0.5)] px-4 py-4 mx-auto flex flex-col w-9/10 md:w-3/5 h-full rounded-b-md items-center font-jakarta">
+    <div className="listing shadow-[0_0_2px_rgba(0,0,0,0.5)] px-4 py-4 mx-auto flex flex-col w-9/10 md:w-4/5 lg:w-3/5 h-full rounded-b-md items-center font-jakarta">
       {error && <p className="text-red-500 mb-2.5">{error}</p>}
       <p className="hidden md:block text-2xl ml-7 mb-2 font-semibold self-start">{listing.title}</p>
       <img
