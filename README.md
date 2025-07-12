@@ -187,25 +187,6 @@ airbnb-clone-mern/
 └── README.md
 ```
 
-## 🔧 API Endpoints
-
-### Authentication
-- `POST /auth/signup` - User registration
-- `POST /auth/login` - User login
-- `GET /auth/logout` - User logout
-- `GET /auth/status` - Check authentication status
-
-### Listings
-- `GET /listings` - Get all listings
-- `GET /listings/:id` - Get specific listing
-- `POST /listings` - Create new listing
-- `PUT /listings/:id` - Update listing
-- `DELETE /listings/:id` - Delete listing
-
-### Reviews
-- `POST /listings/:id/reviews` - Add review to listing
-- `DELETE /listings/:id/reviews/:reviewId` - Delete review
-
 ## 🎯 Key Features Implementation
 
 ### Image Upload with Cloudinary
@@ -223,22 +204,10 @@ airbnb-clone-mern/
 - Breakpoint-specific layouts
 - Touch-friendly interactions
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📝 License
-
-This project is licensed under the ISC License - see the [LICENSE](LICENSE) file for details.
-
 ## 👨‍💻 Author
 
 **Shukardeen**
-- GitHub: [@yourusername](https://github.com/yourusername)
+- GitHub: (https://github.com/shukardeen)
 
 ## 🙏 Acknowledgments
 
@@ -247,10 +216,6 @@ This project is licensed under the ISC License - see the [LICENSE](LICENSE) file
 - [Mapbox](https://mapbox.com) for mapping services
 - [Cloudinary](https://cloudinary.com) for image management
 - [Lottie](https://lottiefiles.com) for animations
-
-## 📞 Support
-
-If you have any questions or need support, please open an issue on GitHub or contact the maintainer.
 
 ---
 
